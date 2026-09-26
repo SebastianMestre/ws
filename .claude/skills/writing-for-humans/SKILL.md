@@ -36,6 +36,18 @@ Do not ask the model what would resonate. Stay with their friction, their layout
 
 A first pass is a distillation, not a finish. Revision is where authorship happens.
 
+## Write the thing, not the search
+
+This applies to every piece of human-facing prose, including design notes.
+
+Put down the fact. Do not put down how you learned it, what you looked for, what you discussed, or what you discarded. A reader should not be able to reconstruct the chat or the exploration from the page.
+
+Do not list status-quo absences. “There is no daemon” is what you learn by hunting a daemon. The default for a CLI is no daemon, so the sentence brings in a thing the reader never needed to hear about. That includes omitted features, postponed ideas, platforms you did not target, and tools you did not add.
+
+Name an absence only when a careful reader would wrongly assume the thing exists. Then state what is true instead. “This graph database has no graph type; edges are rows in `link` and queries are recursive SQL.” What replaces the missing piece is the point. A bare “there is no X” still drags X into the room.
+
+An action rule is different. “Dirty `rm` needs `--force`” tells someone what to do.
+
 ## Demonstrate, don't announce
 
 The root rule: never tell the reader what to think of something. Cool people do not need to tell people they are cool.
@@ -49,7 +61,7 @@ The root rule: never tell the reader what to think of something. Cool people do 
 | I'm going to make three points | Make them. |
 | It's not X, it's Y | Lead with what is true. Contrast later, once, if it adds information. |
 
-Same move, many costumes: "worth \_\_\_", "the right \_\_\_", "quietly", "settled", "honestly" on your own claim, "what I want you to see", "the tell". All of them label value, drama, or cleverness. Cut the label.
+These all label value, drama, or cleverness: "worth \_\_\_", "the right \_\_\_", "quietly", "settled", "honestly" on your own claim, "what I want you to see", "the tell". Cut the label.
 
 ## Plain English
 
@@ -98,6 +110,8 @@ Copy and use:
 ```
 Scrub:
 - [ ] Every claim traces to the user, the repo, or a checked source
+- [ ] Facts only; no chat or exploration on the page
+- [ ] No status-quo absence unless a reader would wrongly assume the thing exists
 - [ ] No invented noticing, ranking, or emotion
 - [ ] Value is shown, not labeled (no "worth", "matters", "useful part")
 - [ ] No "it's not X, it's Y" / "not only X but Y"
