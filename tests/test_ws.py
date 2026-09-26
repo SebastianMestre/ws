@@ -74,6 +74,24 @@ def test_init_creates_layout(project: Project) -> None:
     assert (project.root / "docs").is_dir()
     assert (project.root / "data").is_dir()
     assert (project.root / "tmp").is_dir()
+    assert (project.root / "CLAUDE.md").is_file()
+    claude = (project.root / "CLAUDE.md").read_text()
+    assert "docs/ws-project.md" in claude
+    assert "ws repo ls" not in claude
+    assert (project.root / "docs" / "ws-project.md").is_file()
+    assert (project.root / "docs" / "ws-workspace.md").is_file()
+    assert "ws checkout ls" in (project.root / "docs" / "ws-workspace.md").read_text()
+    assert "ws add" in (project.root / "docs" / "ws-project.md").read_text()
+
+
+def test_init_appends_claude_link(tmp_path: Path) -> None:
+    root = tmp_path / "existing"
+    root.mkdir()
+    (root / "CLAUDE.md").write_text("# My project\n")
+    Project.init(root)
+    text = (root / "CLAUDE.md").read_text()
+    assert text.startswith("# My project")
+    assert "docs/ws-project.md" in text
 
 
 def test_init_twice_fails(project: Project) -> None:
@@ -91,7 +109,11 @@ def test_workspace_links_docs_data_tmp(project: Project) -> None:
     assert (root / "data").resolve() == project.data_path().resolve()
     assert (root / "tmp").resolve() == project.scratch_path("task").resolve()
     assert (root / "CLAUDE.md").is_file()
-    assert "stay inside" in (root / "CLAUDE.md").read_text().lower()
+    claude = (root / "CLAUDE.md").read_text()
+    assert "stay inside" in claude.lower()
+    assert "docs/ws-workspace.md" in claude
+    assert "readonly" not in claude.lower()
+    assert "|" not in claude
 
 
 def test_readonly_checkout_is_shared_symlink(project: Project, foo_repo: Path) -> None:
@@ -112,6 +134,9 @@ def test_readonly_checkout_is_shared_symlink(project: Project, foo_repo: Path) -
     assert path_b.resolve() == shared.resolve()
     assert (path_a / "README").read_text() == "hello\n"
     assert git_kind(project.repo_path("foo")) == "bare"
+    claude = (a.path() / "CLAUDE.md").read_text()
+    assert "foo" not in claude
+    assert "origin/main" not in claude
 
 
 def test_readwrite_uses_unique_branch(project: Project, foo_repo: Path) -> None:

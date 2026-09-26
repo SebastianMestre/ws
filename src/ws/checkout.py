@@ -70,7 +70,6 @@ class Checkout:
             )
 
         ws.checkouts.append(record)
-        self.workspace.overlay().write()
         return record
 
     def remove(self, *, force: bool = False) -> None:
@@ -93,7 +92,6 @@ class Checkout:
 
         ws = self.workspace.require_record()
         ws.checkouts = [c for c in ws.checkouts if c.name != self.name]
-        self.workspace.overlay().write()
 
     def promote(self) -> CheckoutState:
         record = self.record()
@@ -109,5 +107,4 @@ class Checkout:
         git.worktree_add_branch(dest, branch, head)
         record.mode = "readwrite"
         record.branch = branch
-        self.workspace.overlay().write()
         return record

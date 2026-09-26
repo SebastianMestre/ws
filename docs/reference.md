@@ -292,11 +292,16 @@ shared:
 
 ---
 
-## Generated `CLAUDE.md`
+## Bundled agent docs
 
-`wt/<name>/CLAUDE.md` is rewritten on workspace create and on every
-checkout add/rm/promote. It lists checkouts and states the readonly
-rules. The project-root `CLAUDE.md` (if any) is never modified.
+`init` copies `docs/ws-project.md` and `docs/ws-workspace.md` from
+the package. It writes a project-root `CLAUDE.md` that links to
+`docs/ws-project.md`, or appends that link if the file already
+exists. Neither file lists repos or workspaces.
+
+`wt/<name>/CLAUDE.md` is written once on workspace create. It links
+to `docs/ws-workspace.md` (via the workspace `docs/` symlink) and
+does not list checkouts. Use `ws checkout ls`.
 
 ---
 

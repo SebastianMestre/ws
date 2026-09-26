@@ -9,6 +9,7 @@ from ws.errors import WsError
 from ws.lock import ProjectLock
 from ws.names import require_ref
 from ws.state import State
+from ws.templates import install_docs, install_project_claude
 
 WS_GITIGNORE = """\
 lock
@@ -109,6 +110,8 @@ class Project:
         project = cls(root, config, state)
         project.save()
         (project.ws_dir / ".gitignore").write_text(WS_GITIGNORE)
+        install_docs(project.docs_path())
+        install_project_claude(project.root)
         return project
 
     def workspace_from_cwd(self, cwd: Path | None = None) -> str | None:
