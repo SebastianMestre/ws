@@ -2,7 +2,7 @@
 
 Facts about `ws` as implemented. For a first run, use
 [Getting started](getting-started.md). For design intent, see
-[docs/design/](design/LAYOUT.md).
+[docs/design/](design/INDEX.md).
 
 Commands print `ws: <message>` on stderr and exit `1` on failure, `0`
 on success. Mutating commands take an exclusive `flock` on

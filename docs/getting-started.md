@@ -139,4 +139,4 @@ You now have a project you can keep, or delete with
 ## What to read next
 
 - [Reference](reference.md) — every command, flag, and file
-- [Layout](design/LAYOUT.md) — why the tree looks like this
+- [Design notes](design/INDEX.md) — why the tree looks like this

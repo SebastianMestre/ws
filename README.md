@@ -11,7 +11,7 @@ types:
 | --- | --- |
 | Learn | [Getting started](docs/getting-started.md) |
 | Look up | [Reference](docs/reference.md) |
-| Understand | [Design notes](docs/design/LAYOUT.md) |
+| Understand | [Design notes](docs/design/INDEX.md) |
 
 How-to guides are not written yet; use the reference for specific
 flags and the tutorial for a first successful run.
