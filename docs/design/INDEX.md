@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # Design notes
 
 Working notes from the v1 design, not user docs. Start with

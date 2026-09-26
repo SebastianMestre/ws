@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # Dogfood: `example/` with Jasper and bytecode
 
 What it actually took to stand up a project and two workspaces, 2026-09-26.

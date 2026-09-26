@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # On-disk layout (v1)
 
 Sits on the existing Claude Code project tree. `.ws/` is tool state.

@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # Yard — independent design (GPT 5.6 Sol)
 
 Generated with empty context; did not see the `ws` design. Model: gpt-5.6-sol-medium.

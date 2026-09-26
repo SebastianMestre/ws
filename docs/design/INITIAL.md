@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # WS — initial design
 
 A project is usually several git repos. A task often needs more than one of

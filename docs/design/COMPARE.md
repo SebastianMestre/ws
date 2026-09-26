@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # Independent designs vs `ws`
 
 Three agents designed from the same workflow prompt and did not see

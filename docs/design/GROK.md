@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # booth — independent design (Grok 4.7)
 
 Generated with empty context; did not see the `ws` design. Model: grok-4.7-high-fast.

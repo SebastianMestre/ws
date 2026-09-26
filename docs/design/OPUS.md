@@ -1,3 +1,5 @@
+<!-- ai-authored -->
+
 # bay — independent design (Claude Opus 5.5)
 
 Generated with empty context; did not see the `ws` design. Model: claude-opus-5-5-medium (no high-effort 5.5 slug available).
