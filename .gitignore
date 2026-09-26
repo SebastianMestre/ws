@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Local dogfood project (cloned remotes)
+example/
+
+# Tests
+.pytest_cache/

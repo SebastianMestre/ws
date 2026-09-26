@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from ws!")
+from ws.cli import main
+
+__all__ = ["main"]
