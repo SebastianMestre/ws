@@ -94,9 +94,7 @@ def test_workspace_links_docs_data_tmp(project: Project) -> None:
     assert "stay inside" in (root / "CLAUDE.md").read_text().lower()
 
 
-def test_readonly_checkout_is_shared_symlink(
-    project: Project, foo_repo: Path
-) -> None:
+def test_readonly_checkout_is_shared_symlink(project: Project, foo_repo: Path) -> None:
     a = Workspace(project, "a")
     b = Workspace(project, "b")
     a.create()

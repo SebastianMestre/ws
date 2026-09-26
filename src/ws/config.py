@@ -89,9 +89,7 @@ class Config:
             repos.append(item)
         shared = []
         for item in self.shared:
-            shared.append(
-                {"repo": item.repo, "ref": item.ref, "retain": item.retain}
-            )
+            shared.append({"repo": item.repo, "ref": item.ref, "retain": item.retain})
         return {
             "defaults": {"ref": self.defaults.ref, "mode": self.defaults.mode},
             "repos": repos,
