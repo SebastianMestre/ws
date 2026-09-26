@@ -1,16 +1,22 @@
 # ws
 
-Manage multi-repo workspaces for agentic workflows. Bare clones live
+CLI for multi-repo workspaces in agentic workflows. Bare clones live
 under `.ws/repos/`, shared readonly trees under `.ws/shared/`, and
-work happens in `wt/`.
+all work happens in `wt/`.
+
+Documentation follows the [Diátaxis](https://diataxis.fr/) four
+types:
+
+| Need | Doc |
+| --- | --- |
+| Learn | [Getting started](docs/getting-started.md) |
+| Look up | [Reference](docs/reference.md) |
+| Understand | [Design notes](docs/design/LAYOUT.md) |
+
+How-to guides are not written yet; use the reference for specific
+flags and the tutorial for a first successful run.
 
 ```
-ws init
-ws repo add git@github.com:org/foo.git
-ws add fix-auth
-ws checkout add fix-auth foo --mode readonly
-ws checkout promote fix-auth foo
-ws rm fix-auth
+uv tool install -e .
+ws init ~/my-project
 ```
-
-See `docs/design/LAYOUT.md` for the v1 layout.
