@@ -2,7 +2,9 @@
 
 # Introduction
 
-`ws` is a CLI for multi-repo workspaces in agentic workflows. Bare clones
+`ws` is a CLI for multi-repo workspaces in agentic workflows.
+
+Within a `wt`-managed project, clones
 are under `.ws/repos/`, shared readonly trees under `.ws/shared/`, and
 work happens in `wt/`.
 
